@@ -39,39 +39,39 @@ Properties list:
 
 Functions list:
 
-:ref:`addCookie() <webpage-addCookie>` :ref:`childFramesCount() <webpage-childFramesCount>` :ref:`childFramesName() <webpage-childFramesName>` 
-:ref:`clearCookies() <webpage-clearCookies>` :ref:`close() <webpage-close>` :ref:`currentFrameName() <webpage-currentFrameName>` 
-:ref:`deleteCookie() <webpage-deleteCookie>` :ref:`evaluateJavaScript() <webpage-evaluateJavaScript>` :ref:`evaluate() <webpage-evaluate>` 
-:ref:`evaluateAsync() <webpage-evaluateAsync>` :ref:`getPage() <webpage-getPage>` :ref:`go() <webpage-go>` 
-:ref:`goBack() <webpage-goBack>` :ref:`goForward() <webpage-goForward>` :ref:`includeJs() <webpage-includeJs>` 
-:ref:`injectJs() <webpage-injectJs>` :ref:`open() <webpage-open>` :ref:`openUrl() <webpage-openUrl>` 
-:ref:`release() <webpage-release>` :ref:`reload() <webpage-reload>` :ref:`render() <webpage-render>` 
-:ref:`renderBase64() <webpage-renderBase64>` :ref:`sendEvent() <webpage-sendEvent>` 
-:ref:`setContent() <webpage-setContent>` :ref:`stop() <webpage-stop>` :ref:`switchToFocusedFrame() <webpage-switchToFocusedFrame>` 
-:ref:`switchToFrame() <webpage-switchToFrame>` :ref:`switchToChildFrame() <webpage-switchToChildFrame>` 
+:ref:`addCookie() <webpage-addCookie>` :ref:`childFramesCount() <webpage-childFramesCount>` :ref:`childFramesName() <webpage-childFramesName>`
+:ref:`clearCookies() <webpage-clearCookies>` :ref:`close() <webpage-close>` :ref:`currentFrameName() <webpage-currentFrameName>`
+:ref:`deleteCookie() <webpage-deleteCookie>` :ref:`evaluateJavaScript() <webpage-evaluateJavaScript>` :ref:`evaluate() <webpage-evaluate>`
+:ref:`evaluateAsync() <webpage-evaluateAsync>` :ref:`getPage() <webpage-getPage>` :ref:`go() <webpage-go>`
+:ref:`goBack() <webpage-goBack>` :ref:`goForward() <webpage-goForward>` :ref:`includeJs() <webpage-includeJs>`
+:ref:`injectJs() <webpage-injectJs>` :ref:`open() <webpage-open>` :ref:`openUrl() <webpage-openUrl>`
+:ref:`release() <webpage-release>` :ref:`reload() <webpage-reload>` :ref:`render() <webpage-render>`
+:ref:`renderBase64() <webpage-renderBase64>` :ref:`sendEvent() <webpage-sendEvent>`
+:ref:`setContent() <webpage-setContent>` :ref:`stop() <webpage-stop>` :ref:`switchToFocusedFrame() <webpage-switchToFocusedFrame>`
+:ref:`switchToFrame() <webpage-switchToFrame>` :ref:`switchToChildFrame() <webpage-switchToChildFrame>`
 :ref:`switchToMainFrame() <webpage-switchToMainFrame>`
 :ref:`switchToParentFrame() <webpage-switchToParentFrame>` :ref:`uploadFile() <webpage-uploadFile>`
 
 Callbacks list:
 
-:ref:`onAlert <webpage-onAlert>` :ref:`onAuthPrompt <webpage-onAuthPrompt>`  :ref:`onCallback <webpage-onCallback>` :ref:`onClosing <webpage-onClosing>` 
-:ref:`onConfirm <webpage-onConfirm>` :ref:`onConsoleMessage <webpage-onConsoleMessage>` :ref:`onError <webpage-onError>` 
-:ref:`onFilePicker <webpage-onFilePicker>` :ref:`onInitialized <webpage-onInitialized>` :ref:`onLoadFinished <webpage-onLoadFinished>` 
-:ref:`onLoadStarted <webpage-onLoadStarted>` :ref:`onNavigationRequested <webpage-onNavigationRequested>` :ref:`onPageCreated <webpage-onPageCreated>` 
+:ref:`onAlert <webpage-onAlert>` :ref:`onAuthPrompt <webpage-onAuthPrompt>`  :ref:`onCallback <webpage-onCallback>` :ref:`onClosing <webpage-onClosing>`
+:ref:`onConfirm <webpage-onConfirm>` :ref:`onConsoleMessage <webpage-onConsoleMessage>` :ref:`onError <webpage-onError>`
+:ref:`onFilePicker <webpage-onFilePicker>` :ref:`onInitialized <webpage-onInitialized>` :ref:`onLoadFinished <webpage-onLoadFinished>`
+:ref:`onLoadStarted <webpage-onLoadStarted>` :ref:`onNavigationRequested <webpage-onNavigationRequested>` :ref:`onPageCreated <webpage-onPageCreated>`
 :ref:`onPrompt <webpage-onPrompt>` :ref:`onResourceError <webpage-onResourceError>`
-:ref:`onResourceRequested <webpage-onResourceRequested>` :ref:`onResourceReceived <webpage-onResourceReceived>` 
+:ref:`onResourceRequested <webpage-onResourceRequested>` :ref:`onResourceReceived <webpage-onResourceReceived>`
 :ref:`onResourceTimeout <webpage-onResourceTimeout>`  :ref:`onUrlChanged <webpage-onUrlChanged>`
 
 Internal methods to trigger callbacks:
 
-:ref:`closing() <webpage-closing>` :ref:`initialized() <webpage-initialized>` 
+:ref:`closing() <webpage-closing>` :ref:`initialized() <webpage-initialized>`
 :ref:`javaScriptAlertSent() <webpage-javaScriptAlertSent>`
 :ref:`javaScriptConsoleMessageSent() <webpage-javaScriptConsoleMessageSent>`
 :ref:`loadFinished() <webpage-loadFinished>` :ref:`loadStarted() <webpage-loadStarted>`
 :ref:`navigationRequested() <webpage-navigationRequested>` :ref:`rawPageCreated() <webpage-rawPageCreated>`
 :ref:`resourceError() <webpage-resourceError>`
 :ref:`resourceReceived() <webpage-resourceReceived>` :ref:`resourceRequested() <webpage-resourceRequested>`
-:ref:`urlChanged() <webpage-urlChanged>` 
+:ref:`urlChanged() <webpage-urlChanged>`
 
 
 
@@ -342,7 +342,7 @@ the page is automatically removed from this list.
 
 You should not keep a strong reference to this array since you obtain
 only a copy, so in this case you won't see changes.
- 
+
 If "ownsPages" is "false", this list won't owns the child pages.
 
 
@@ -740,7 +740,7 @@ To load two pages, one after an other, here is how to do:
 
    page.open("http://example.com/page1", function(status){
         // do something on the page...
-        
+
         page.open("http://example.com/page2", function(status){
             // do something on the page...
         })
@@ -753,12 +753,12 @@ With the promise, it's better in term of code (not compatible with PhantomJS):
    page.open("http://example.com/page1")
        .then(function(status){
            // do something on the page...
-           
+
            return page.open("http://example.com/page2")
        })
        .then(function(status){
            // do something on the page...
-           
+
            // etc...
            return page.open("http://example.com/page3")
        })
@@ -793,7 +793,7 @@ openUrl(url, httpConf, settings, callback)
 
 Like ``open()``, it loads a webpage. The only difference is the number
 and the type of arguments.
- 
+
 ``httpConf`` is an object with these properties:
 
 - ``httpConf.operation``: the http method. Allowed values: ``'get'`` or ``'post'`` (other methods are not supported in SlimerJS)
@@ -891,7 +891,7 @@ The event type is given as the first argument.
 **Mouse events**
 
 You should indicate 'mouseup', 'mousedown', 'mousemove', 'doubleclick'
-or 'click' as event type. 
+or 'click' as event type.
 
 Arguments arg1 and arg2 should represent the mouse position on the window.
 arg1 is the horizontal coordinate (x) and arg2 is the vertical coordinate (y).
@@ -946,7 +946,7 @@ Just give null for them.
     page.sendEvent('keypress', page.event.key.B);
     page.sendEvent('keypress', "C");
     page.sendEvent('keypress', "abc");
-    
+
     var mod = page.event.modifier.ctrl | page.event.modifier.shift;
     page.sendEvent('keypress', page.event.key.A, null, null, mod);
 
@@ -1092,7 +1092,19 @@ Implemented. Documentation needed.
 onConsoleMessage
 -----------------------------------------
 
-Implemented. Documentation needed.
+This callback is called when page scripts call the various console methods (console.log(), console.info() etc.). This callback is ``not`` called when the Gecko engine itself outputs information to the console - see :_webpage-onError:`onError for those messages.
+
+The callback accepts three arguments:
+
+- ``message``: a string containing the text of the message
+- ``line``: the line number of the statement that calls the console method
+- ``file``: the file name of the statement that calls the console method
+
+.. code-block:: javascript
+
+    page.onConsoleMessage = function(message, line, file) {
+        // Process message here
+    };
 
 
 .. _webpage-onError:
@@ -1221,7 +1233,7 @@ Example:
     page.onNavigationRequested = function(url, type, willNavigate, main) {
         console.log('Navigate to: ' + url);
     }
- 
+
 
 .. _webpage-onPageCreated:
 
@@ -1247,7 +1259,7 @@ This callback is invoked when the browser received a netword error about a resou
 
 The unique parameter received by the callback is an object containing these
 informations:
- 
+
 - ``id``: the number of the requested resource
 - ``url``:  the url of the resource
 - ``errorCode``: an error code (see possible values below)
@@ -1286,7 +1298,7 @@ images, frames, css files etc.
 
 The unique parameter received by the callback is an object containing these
 informations:
- 
+
 - ``id``: the number of the requested resource
 - ``url``:  the url of the resource
 - ``time``: a Date object
@@ -1398,7 +1410,7 @@ initialized()
 -----------------------------------------
 
 Call the callback :ref:`onInitialized <webpage-onInitialized>` if it has been set.
- 
+
 
 .. _webpage-javaScriptAlertSent:
 
@@ -1487,7 +1499,7 @@ urlChanged(url)
 Call the callback :ref:`onUrlChanged <webpage-onUrlChanged>` with given
 parameters, if the callback has been set.
 
- 
+
 
 
 
