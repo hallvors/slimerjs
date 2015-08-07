@@ -98,11 +98,21 @@ var slimer =  {
         slUtils.sleep(msTime);
     },
 
+    /**
+     * Logs memory statistics from Gecko internals to file given by filename
+       @param string filename  path and name of file we're writing memory stats to. Extension should be .json.gz .
+     */
+    logGeckoMemStats : function(filename){
+        var dumper = Components.classes["@mozilla.org/memory-info-dumper;1"].getService(Components.interfaces.nsIMemoryInfoDumper);
+        dumper.dumpMemoryReportsToNamedFile(filename, function(){}, null, false);
+    },
+
     __exposedProps__ : {
         version : 'r',
         exit : 'r',
         clearHttpAuth : 'r',
         hasFeature : 'r',
-        wait: 'r'
+        wait: 'r',
+        logGeckoMemStats: 'r'
     }
 }
